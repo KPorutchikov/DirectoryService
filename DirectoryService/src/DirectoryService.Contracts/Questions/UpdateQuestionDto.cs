@@ -1,3 +1,3 @@
-﻿namespace DirectoryService.Contracts;
+﻿namespace DirectoryService.Contracts.Questions;
 
 public record UpdateQuestionDto(string Title, string Body, Guid[] TagIds);

@@ -1,3 +1,3 @@
-﻿namespace DirectoryService.Contracts;
+﻿namespace DirectoryService.Contracts.Questions;
 
 public record AddAnswerDto(Guid UserId, string Text);

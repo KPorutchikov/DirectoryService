@@ -1,20 +1,24 @@
-using DirectoryService.Contracts;
+using DirectoryService.Application.Questions;
+using DirectoryService.Contracts.Questions;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DirectoryService.Presenters;
+namespace DirectoryService.Presenters.Questions;
 
 [ApiController]
 [Route("[controller]")]
-public class QuestionController : ControllerBase
+public class QuestionsController : ControllerBase
 {
-    [HttpPost]
-    public async Task<IActionResult> Create(
-        [FromBody] CreateQuestionDto request, 
-        CancellationToken ct)
+    private readonly IQuestionsService _questionsService;
+    public QuestionsController(IQuestionsService questionsService)
     {
-        
-        
-        return Ok();
+        _questionsService = questionsService;
+    }
+    
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] CreateQuestionDto request, CancellationToken ct)
+    {
+        var result = await _questionsService.Create(request, ct);
+        return Ok(result);
     }
 
     [HttpGet]
@@ -22,35 +26,27 @@ public class QuestionController : ControllerBase
         [FromQuery] GetQuestionsDto request, 
         CancellationToken ct)
     {
-        
         return Ok();
     }
-    
+
     [HttpGet("{questionId:guid}")]
-    public async Task<IActionResult> GetById(
-        [FromRoute] Guid questionId, 
-        CancellationToken ct)
+    public async Task<IActionResult> GetById([FromRoute] Guid questionId, CancellationToken ct)
     {
-        
         return Ok();
     }
-    
+
     [HttpPut("{questionId:guid}")]
     public async Task<IActionResult> Update(
         [FromRoute] Guid questionId,
         [FromBody] UpdateQuestionDto request,
         CancellationToken ct)
     {
-        
         return Ok();
     }
-    
+
     [HttpDelete("{questionId:guid}")]
-    public async Task<IActionResult> Delete(
-        [FromRoute] Guid questionId, 
-        CancellationToken ct)
+    public async Task<IActionResult> Delete([FromRoute] Guid questionId, CancellationToken ct)
     {
-        
         return Ok();
     }
 
@@ -64,15 +60,12 @@ public class QuestionController : ControllerBase
         return Ok();
     }
 
-    
     [HttpPost("{questionId:guid}/answers")]
     public async Task<IActionResult> AddAnswer(
         [FromRoute] Guid questionId,
         [FromBody] AddAnswerDto request,
         CancellationToken ct)
     {
-        
-        
         return Ok();
     }
 }
