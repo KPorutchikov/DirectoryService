@@ -1,5 +1,6 @@
 using DirectoryService.Application.Questions;
 using DirectoryService.Contracts.Questions;
+using DirectoryService.Presenters.ResponseExtensions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DirectoryService.Presenters.Questions;
@@ -18,7 +19,8 @@ public class QuestionsController : ControllerBase
     public async Task<IActionResult> Create([FromBody] CreateQuestionDto request, CancellationToken ct)
     {
         var result = await _questionsService.Create(request, ct);
-        return Ok(result);
+
+        return result.IsFailure ? result.Error.ToResponse() : Ok(result.Value);
     }
 
     [HttpGet]

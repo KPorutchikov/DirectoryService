@@ -18,6 +18,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryService.Contracts"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryService.Application", "src\DirectoryService.Application\DirectoryService.Application.csproj", "{FA2D8379-B12D-4FE4-8A59-7607EF6E0619}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryService.Infrastructure.Postgres", "src\DirectoryService.Infrastructure.Postgres\DirectoryService.Infrastructure.Postgres.csproj", "{06F6290C-A8B3-462A-93F8-2EDDE26BD2E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "src\Shared\Shared.csproj", "{B7E84F9E-FA1B-4821-8285-2AA70DAD2379}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +48,14 @@ Global
 		{FA2D8379-B12D-4FE4-8A59-7607EF6E0619}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA2D8379-B12D-4FE4-8A59-7607EF6E0619}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA2D8379-B12D-4FE4-8A59-7607EF6E0619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06F6290C-A8B3-462A-93F8-2EDDE26BD2E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06F6290C-A8B3-462A-93F8-2EDDE26BD2E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06F6290C-A8B3-462A-93F8-2EDDE26BD2E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06F6290C-A8B3-462A-93F8-2EDDE26BD2E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7E84F9E-FA1B-4821-8285-2AA70DAD2379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7E84F9E-FA1B-4821-8285-2AA70DAD2379}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7E84F9E-FA1B-4821-8285-2AA70DAD2379}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7E84F9E-FA1B-4821-8285-2AA70DAD2379}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{604DBCED-7FA3-4F96-880D-CFE9A509571B} = {9D44F9D3-DD4E-4FFC-8FFF-9375C56859F1}
@@ -51,5 +63,7 @@ Global
 		{17452683-5D30-43AC-8277-D900741E6CBB} = {9D44F9D3-DD4E-4FFC-8FFF-9375C56859F1}
 		{5D98C46F-FC43-4A53-BE37-39A963912A4A} = {9D44F9D3-DD4E-4FFC-8FFF-9375C56859F1}
 		{FA2D8379-B12D-4FE4-8A59-7607EF6E0619} = {9D44F9D3-DD4E-4FFC-8FFF-9375C56859F1}
+		{06F6290C-A8B3-462A-93F8-2EDDE26BD2E1} = {9D44F9D3-DD4E-4FFC-8FFF-9375C56859F1}
+		{B7E84F9E-FA1B-4821-8285-2AA70DAD2379} = {9D44F9D3-DD4E-4FFC-8FFF-9375C56859F1}
 	EndGlobalSection
 EndGlobal
