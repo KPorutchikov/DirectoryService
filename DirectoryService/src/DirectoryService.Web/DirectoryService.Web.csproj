@@ -14,6 +14,7 @@
     <ItemGroup>
       <ProjectReference Include="..\DirectoryService.Application\DirectoryService.Application.csproj" />
       <ProjectReference Include="..\DirectoryService.Domain\DirectoryService.Domain.csproj" />
+      <ProjectReference Include="..\DirectoryService.Infrastructure.Postgres\DirectoryService.Infrastructure.Postgres.csproj" />
       <ProjectReference Include="..\DirectoryService.Presenters\DirectoryService.Presenters.csproj" />
     </ItemGroup>
 
